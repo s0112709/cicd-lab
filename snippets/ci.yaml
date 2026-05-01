@@ -63,4 +63,4 @@ jobs:
   cd:
     if: ${{ startsWith(github.ref, 'refs/heads/release/') }}
     needs: ci
-    uses: ./.github/workflows/cd.yml
+    uses: ./.github/workflows/cd.yaml
