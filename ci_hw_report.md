@@ -162,20 +162,9 @@ jobs:
 
 ## CI 執行結果截圖
 
-成功執行截圖放置位置：
-
-![GitHub Actions 成功執行截圖](./images/actions-success.png)
-
-截圖中需要呈現 GitHub Actions workflow `CI 314551089` 成功完成，並可看到
-`TypeScript typecheck`、`Prettier check`、`Run tests and create JUnit report`、
-`Publish test result summary` 等 steps 執行成功。
-
-GitHub Actions 測試結果摘要截圖放置位置：
-
-![GitHub Actions 測試結果摘要截圖](./images/actions-test-summary.png)
-
-截圖中需要呈現 `Vitest Test Results` 表格，包含 Total、Passed、Failed、Errors、
-Skipped 與 Time 欄位。
+![GitHub Actions 成功執行](./images/GitHub_Actions.png)
+![GitHub Actions 細節](./images/GitHub_Actions_detail.png)
+![GitHub Actions 測試結果摘要](./images/GitHub_Actions_summary.png)
 
 ## 失敗案例說明
 
