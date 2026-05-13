@@ -162,8 +162,18 @@ jobs:
 
 ## CI 執行結果截圖
 
+下圖顯示 `CI 314551089` workflow 成功執行，job 狀態為 success。
+
 ![GitHub Actions 成功執行](./images/GitHub_Actions.png)
+
+下圖顯示主要檢查步驟皆成功，包含 TypeScript typecheck、Prettier check 與
+Vitest 測試。
+
 ![GitHub Actions 細節](./images/GitHub_Actions_detail.png)
+
+下圖顯示 GitHub Actions summary 中的 `Vitest Test Results`，可看到 2 個測試皆
+通過，並有 JUnit report artifact。
+
 ![GitHub Actions 測試結果摘要](./images/GitHub_Actions_summary.png)
 
 ## 失敗案例說明
@@ -180,9 +190,19 @@ expect(response.json().message).toBe('wrong message');
 `Publish test result summary` 並顯示測試失敗摘要，最後
 `Fail when tests fail` step 會使整個 pipeline 顯示 failed。
 
-失敗執行截圖放置位置：
+下圖顯示 workflow run 清單中同時有成功與失敗紀錄，失敗案例狀態為 failed。
 
-![GitHub Actions 失敗執行截圖](./images/actions-failed.png)
+![GitHub Actions 失敗執行截圖](./images/GitHub_Actions_failed.png)
+
+下圖顯示 Vitest 失敗原因：測試預期 `wrong message`，但實際收到
+`CI/CD Lab Fastify app is running`。
+
+![GitHub Actions 失敗細節](./images/GitHub_Actions_failed_detail.png)
+
+下圖顯示失敗 run 的 summary，`Vitest Test Results` 中 Total 為 2，Passed 為 1，
+Failed 為 1。
+
+![GitHub Actions 失敗結果摘要](./images/GitHub_Actions_failed_summary.png)
 
 錯誤原因：測試中的 expected message 與 Fastify app 實際回傳的 message 不一致。
 
